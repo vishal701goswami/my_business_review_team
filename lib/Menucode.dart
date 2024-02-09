@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:my_business_review_team/List_task.dart';
 import 'package:my_business_review_team/Profilepge.dart';
+import 'package:my_business_review_team/ProjectedBidspage.dart';
 
 class Menu extends StatefulWidget {
   const Menu({super.key});
@@ -195,24 +196,33 @@ class _MenuState extends State<Menu> {
                       });
                     },
                     child: Center(
-                      child: Container(
-                        decoration: BoxDecoration(
-                            color: Colors.black,
-                            borderRadius: BorderRadius.circular(500),
-                            boxShadow: [
-                              if (pageindex == 2)
-                                const BoxShadow(
-                                  color: Colors.black54,
-                                  spreadRadius: 1,
-                                  blurRadius: 10,
-                                  offset: Offset(0, 0),
-                                )
-                            ]),
-                        child: const Padding(
-                          padding: EdgeInsets.all(10.0),
-                          child: Icon(
-                            Icons.backup_table,
-                            color: Colors.white,
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              CupertinoPageRoute(
+                                builder: (context) => Projects(),
+                              ));
+                        },
+                        child: Container(
+                          decoration: BoxDecoration(
+                              color: Colors.black,
+                              borderRadius: BorderRadius.circular(500),
+                              boxShadow: [
+                                if (pageindex == 2)
+                                  const BoxShadow(
+                                    color: Colors.black54,
+                                    spreadRadius: 1,
+                                    blurRadius: 10,
+                                    offset: Offset(0, 0),
+                                  )
+                              ]),
+                          child: const Padding(
+                            padding: EdgeInsets.all(10.0),
+                            child: Icon(
+                              Icons.backup_table,
+                              color: Colors.white,
+                            ),
                           ),
                         ),
                       ),

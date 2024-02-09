@@ -328,7 +328,10 @@ class _UserPaymentSectionState extends State<UserPaymentSection> {
               ),
             ],
           ),
-          const Menu()
+          const Stack(
+            alignment: Alignment.bottomCenter,
+            children: [Menu()],
+          ),
         ],
       ),
     );
